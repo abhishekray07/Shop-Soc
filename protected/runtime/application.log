@@ -1,0 +1,34 @@
+2012/05/16 12:28:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Gii".' in /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/CWebApplication.php(135): CWebApplication->runController('Gii')
+#1 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/shop/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shopsocial/shop/index.php/Gii
+---
+2012/05/16 13:40:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.db.employee' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `Employee`.
+in /Applications/XAMPP/xamppfiles/htdocs/shopsocial/shop/protected/controllers/EmployeeController.php (64)
+in /Applications/XAMPP/xamppfiles/htdocs/shopsocial/shop/index.php (13)
+2012/05/16 13:40:33 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Employee" for active record class "Employee" cannot be found in the database.' in /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/db/ar/CActiveRecord.php:2264
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Employee))
+#1 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/db/ar/CActiveRecord.php(394): CActiveRecord::model('Employee')
+#2 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/shop/protected/controllers/EmployeeController.php(64): CActiveRecord->__construct()
+#4 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/actions/CInlineAction.php(50): EmployeeController->actionCreate()
+#5 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/CController.php(292): CFilterChain->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/CWebApplication.php(276): CController->run('create')
+#14 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/web/CWebApplication.php(135): CWebApplication->runController('employee/create')
+#15 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/shopsocial/shop/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/shopsocial/shop/index.php/employee/create
+HTTP_REFERER=http://localhost/shopsocial/shop/index.php/site/login
+---

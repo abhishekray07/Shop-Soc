@@ -53,11 +53,12 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
+			'connectionString' => 'mysql:host=localhost;dbname=blog.db',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
+			'tablePrefix'=>'tbl_',
 		),
 		
 		'errorHandler'=>array(
